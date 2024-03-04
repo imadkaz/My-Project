@@ -50,7 +50,8 @@
 }
 .show{
     position: fixed;
-    box-shadow: 1px 2px 5px gray; 
+    box-shadow: 1px 2px 5px rgba(128, 128, 128, 0.7);
+    transition: 1s ease;
     z-index: 99;
     top:0;
 }
@@ -71,6 +72,18 @@
     .welcom .element .search input{
         width: 400px;
     }
+    .nav-side{
+        display: none;
+    }
+    .product{
+        width: 99%;
+        border: 1px solid black;
+    }
+    .section{
+        display: block;
+    }    
+
+    
 }
 .header2 .logo img{
     width: 117px;
@@ -329,8 +342,8 @@
 }
 .swiper{
    position: relative;
-   height: 400px;
-   margin-bottom: 20px;
+   height: 500px;
+   margin-bottom: 10px;
 }
 
 .all-card
@@ -354,7 +367,13 @@
      /* border: 1px solid black; */
     margin-top: 30px;
     position: relative;
-    
+    transition: .5s ease;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.3);
+
+}
+.all-card .card:hover{
+    box-shadow: 1px 1px 15px rgba(128, 128, 128, 0.5);
 }
 .all-card .card .first-card-content{
     width: 100%;
@@ -515,12 +534,12 @@ color: gray;
 }
 .slider-controls .prev,
 .slider-controls .next{
-    /* position: absolute; */
+    
     display: flex;
     align-items: center;
     justify-content: space-around;
     top: 40%;
-    /* border: 1px solid black; */
+    
     box-shadow: 1px 1px 8px gray;
     transform: translatey(-50%);
     background-color: white;
@@ -576,9 +595,9 @@ color: gray;
 
 .footer{
     width: 100%;
-    height: 350px;
-    background-color: gray;
-    border-radius: 20px;
+    height: 300px;
+    background-color: rgb(20, 24, 80);
+    border-radius: 10px;
 }
 .footer .section{
     display: flex;
@@ -587,24 +606,20 @@ color: gray;
     width: 100%;
 }
 .footer-logo{
-    height: 100px;
+    height: 80px;
     width: 100%;
     display: flex;    
     align-items: center;
     padding-left: 30px;
 }
 .section-one{
- width: 50%;
- 
-}
-.section-two{
     width: 50%;
 }
+
 .footer-text{
     width: 90%;
-    color: goldenrod;
-    
-
+    color: rgb(174, 165, 151);
+    padding-left: 30px;
 }
 .play-store{
     width: 100%;
@@ -612,26 +627,44 @@ color: gray;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 .store {
-    width: 150px;
-    height: 200px;
-}
-.store2 {
-    width: 150px;
-    height: 50px;
+    width: 9.375em;
+    height: 3.25em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(12, 42, 77);
+    border-radius: 5px;
 }
 .store img{
-    width:100%;
-    height: 100%;
+    width: 1.562em;
+    height: 1.562em;
 }
-.store2  img{
-    width:100%;
-    height: 100%;
+.store .btn{
+    color: white;
 }
-
-
-
-
-
- 
+.store .btn p:first-child{
+    font-size: 0.625em;
+}
+.store .btn p:last-child{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.section-two{
+    width: 50%;
+}
+.section-two ul{
+    list-style: none;
+}
+.section-two ul li{
+    padding: 5px 0;
+}
+.section-two ul li a{
+    text-decoration: none;
+    color: rgb(174, 165, 151);
+}
+.section-two ul li a:hover{
+    color: white;
+}

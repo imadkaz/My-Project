@@ -18,23 +18,6 @@ window.onscroll = _ =>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //slider start
 
 
@@ -91,8 +74,8 @@ document.getElementById('indicators').appendChild(paginationElement);
 var paginationCreatedUl = document.getElementById('pagination-ul');
 
 var paginationsBullets = Array.from(document.querySelectorAll('#pagination-ul li'));
-
-for(var i = 0; i < paginationsBullets.length; i++){
+var paginationCount    = paginationsBullets.length;
+for(var i = 0; i < paginationCount; i++){
      
     paginationsBullets[i].onclick = function (){
         currentSlide = parseInt(this.getAttribute('data-index'));
